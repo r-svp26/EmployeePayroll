@@ -34,6 +34,10 @@ WHERE Name='Bill' AND StartDate BETWEEN CAST('2018-01-01' AS DATE ) AND GETDATE(
 ALTER TABLE employee_payroll 
 ADD Gender VARCHAR(2)
 
+/* Set Gender */
+UPDATE employee_payroll set Gender='M' 
+WHERE Name='Bill' OR Name='Charlie'
+
 
 
 
