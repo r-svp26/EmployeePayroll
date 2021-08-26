@@ -25,6 +25,11 @@ INSERT INTO employee_payroll(Name, Salary, StartDate ) VALUES ('Charlie', 30000,
 SELECT *
 FROM employee_payroll
 
+/* Retrieve particular data from employee_payroll */
+SELECT *
+FROM employee_payroll
+WHERE Name='Bill' AND StartDate BETWEEN CAST('2018-01-01' AS DATE ) AND GETDATE();
+
 
 
 
