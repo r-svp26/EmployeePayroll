@@ -21,6 +21,10 @@ INSERT INTO employee_payroll(Name, Salary, StartDate ) VALUES ('Ritesh', 50000, 
 INSERT INTO employee_payroll(Name, Salary, StartDate ) VALUES ('Bill', 40000, '2018-01-01')
 INSERT INTO employee_payroll(Name, Salary, StartDate ) VALUES ('Charlie', 30000, '2016-04-07')
 
+/* Retrieve all the data from employee_payroll */
+SELECT *
+FROM employee_payroll
+
 
 
 
