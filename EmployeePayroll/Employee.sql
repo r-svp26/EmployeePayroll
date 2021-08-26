@@ -38,6 +38,21 @@ ADD Gender VARCHAR(2)
 UPDATE employee_payroll set Gender='M' 
 WHERE Name='Bill' OR Name='Charlie'
 
+/* Count Male & Female Employee */
+SELECT SUM(Salary) AS TotalSalary, AVG(Salary) AS AverageSalary, MIN(Salary) AS MinimumSalary, 
+	   MAX(Salary) AS MaximumSalary, COUNT(*) AS TotalEmployee
+FROM employee_payroll
+WHERE Gender='M' GROUP BY Gender 
+
+SELECT SUM(Salary) AS TotalSalary, AVG(Salary) AS AverageSalary, MIN(Salary) AS MinimumSalary, 
+	   MAX(Salary) AS MaximumSalary, COUNT(*) AS TotalEmployee
+FROM employee_payroll
+WHERE Gender='F' GROUP BY Gender 
+
+
+
+
+
 
 
 
