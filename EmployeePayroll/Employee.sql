@@ -30,6 +30,11 @@ SELECT *
 FROM employee_payroll
 WHERE Name='Bill' AND StartDate BETWEEN CAST('2018-01-01' AS DATE ) AND GETDATE();
 
+/* Add Gender Column */
+ALTER TABLE employee_payroll 
+ADD Gender VARCHAR(2)
+
+
 
 
 
