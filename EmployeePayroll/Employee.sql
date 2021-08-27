@@ -69,6 +69,15 @@ Where Name='Charlie'
 UPDATE employee_payroll SET department='Operation'
 Where Name='Bill'
 
+/* Extend employee_payroll  */
+ALTER TABLE employee_payroll
+DROP COLUMN Salary
+
+ALTER TABLE employee_payroll Add BasicPay int, Deduction float, TaxablePay float, Tax float, NetPay float
+
+
+
+
 
 
 
