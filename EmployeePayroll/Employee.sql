@@ -53,6 +53,30 @@ WHERE Gender='F' GROUP BY Gender
 ALTER TABLE employee_payroll 
 ADD phone_number VARCHAR(12), address VARCHAR(40) DEFAULT ('INDIA'), department VARCHAR (20) NOT NULL DEFAULT ('Engineering');
 
+/* Update Employee Information */
+UPDATE employee_payroll SET phone_number='9907296689'
+Where Name='Ritesh'
+
+UPDATE employee_payroll SET phone_number='7987210395'
+Where Name='Charlie'
+
+UPDATE employee_payroll SET phone_number='9907296600'
+Where Name='Bill'
+
+UPDATE employee_payroll SET department='Account'
+Where Name='Charlie'
+
+UPDATE employee_payroll SET department='Operation'
+Where Name='Bill'
+
+
+
+
+
+
+
+
+
 
 
 
