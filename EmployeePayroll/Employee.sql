@@ -49,6 +49,12 @@ SELECT SUM(Salary) AS TotalSalary, AVG(Salary) AS AverageSalary, MIN(Salary) AS 
 FROM employee_payroll
 WHERE Gender='F' GROUP BY Gender 
 
+/* Add Employee Infomation */
+ALTER TABLE employee_payroll 
+ADD phone_number VARCHAR(12), address VARCHAR(40) DEFAULT ('INDIA'), department VARCHAR (20) NOT NULL DEFAULT ('Engineering');
+
+
+
 
 
 
