@@ -75,6 +75,18 @@ DROP COLUMN Salary
 
 ALTER TABLE employee_payroll Add BasicPay int, Deduction float, TaxablePay float, Tax float, NetPay float
 
+/* Insert Complete Payroll Information */
+INSERT INTO employee_payroll(Name, Gender, StartDate, phone_number, address, department, BasicPay, Deduction, TaxablePay, Tax, NetPay ) 
+							VALUES('Terissa','F','2010-01-01','7987210210','Patna','Marketing',35000,3500.0,1250.0,250.0,30000.0)
+
+INSERT INTO employee_payroll(Name, Gender, StartDate, phone_number, address, department, BasicPay, Deduction, TaxablePay, Tax, NetPay ) 
+							VALUES('Terissa','F','2010-01-01','7987210210','Patna','Sales',35000,3500.0,1250.0,250.0,30000.0)
+/* Retrieve the Terissa Information */
+SELECT *
+FROM employee_payroll
+WHERE Name='Terissa';
+
+
 
 
 
