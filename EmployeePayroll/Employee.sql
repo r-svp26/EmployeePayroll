@@ -86,6 +86,71 @@ SELECT *
 FROM employee_payroll
 WHERE Name='Terissa';
 
+/* Represents the ER Diagram */
+CREATE TABLE Employee 
+(
+ Emp_Id INT IDENTITY(1,1) PRIMARY KEY,
+ Emp_Name VARCHAR(30),
+ Gender CHAR(1),
+ PhoneNumber VARCHAR(12),
+ Address VARCHAR(40),
+ City VARCHAR(15),
+ State VARCHAR(12),
+ Start date
+)
+
+CREATE TABLE Company
+(
+  Company_Id INT IDENTITY(1,1) PRIMARY KEY,
+  Company_Name VARCHAR(40),
+  Emp_Id INT FOREIGN KEY REFERENCES Employee(Emp_Id)
+)
+
+CREATE TABLE Department
+(
+  Dept_Id INT IDENTITY(1,1) PRIMARY KEY,
+  Dept_Name VARCHAR(15),
+  Emp_Id INT FOREIGN KEY REFERENCES Employee(Emp_Id)
+)
+
+CREATE TABLE PayRoll
+(
+  BasicPay INT, 
+  Deduction FLOAT, 
+  TaxablePay FLOAT, 
+  Tax FLOAT,
+  NetPay FLOAT,
+  Emp_Id INT FOREIGN KEY REFERENCES Employee(Emp_Id)
+)
+
+CREATE TABLE Employee_Department
+(
+  Emp_Id INT FOREIGN KEY REFERENCES Employee(Emp_Id),
+  Dept_Id INT FOREIGN KEY REFERENCES Department(Dept_Id),
+)
+
+/* Insert data into Employee */
+INSERT INTO Employee VALUES('Ritesh','M','9907296689','Khaspur','Patna','Bihar','2010-01-01')
+INSERT INTO Employee VALUES('Abhinav','M','7987210395','BTM','Bangalore','KA','2020-02-04')
+INSERT INTO Employee VALUES('Shyam','M','9988998899','Sorojni','Delhi','Delhi','2021-03-10')
+
+/* Insert data into Company */
+INSERT INTO Company Values ('TCS',1)
+INSERT INTO Company Values ('TCS',3)
+INSERT INTO Company Values ('IBM',2)
+
+-- Retrieve the data from tables
+SELECT *
+FROM Employee
+SELECT *
+FROM Company
+
+
+
+
+
+
+
 
 
 
